@@ -1,0 +1,7 @@
+# dsh bundle patch: inserts this plugin into a profile's layer stack.
+# The host row mounts the /skill-mount HTTP routes plus the agent/pre-step
+# injector; the package's `dsh.client` manifest additionally serves the
+# composer tray and the settings section in the browser.
+- insert:
+    - id: dsh-skill-mount
+      name: 'dsh-skill-mount'

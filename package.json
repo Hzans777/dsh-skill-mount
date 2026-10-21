@@ -1,0 +1,54 @@
+{
+  "name": "dsh-skill-mount",
+  "version": "1.0.2",
+  "description": "Skill mount tray for DeepSeek Harness — pick SKILLs from the composer, mount them into the current session, rename them with notes, uninstall or install SKILLs locally from the settings page. · DSH 技能挂载托盘：聊天栏一键挂载／关闭 SKILL，设置页可加备注、卸载、本地安装。",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "YG",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zshlove321-cyber/dsh-skill-mount.git"
+  },
+  "homepage": "https://github.com/zshlove321-cyber/dsh-skill-mount#readme",
+  "bugs": {
+    "url": "https://github.com/zshlove321-cyber/dsh-skill-mount/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "skill",
+    "skills",
+    "mount"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ],
+      "platform": "web"
+    }
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md"
+  ]
+}
